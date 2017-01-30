@@ -12,20 +12,23 @@ def main():
     yUns = -.1
     flip = True
     
-    for i in range(100):
+    for i in range(50):
         for frame in range(5000):
+            
             if(flip):
                 c.move(xUns, 0)
             else:
                 c.move(0, yUns)
                 
-            update(30)
+            update(120)
 
         flip = not(flip)
             
         if( i%2 == 0):
+            c.setFill(color_rgb(0, 0, 255))
             yUns*= -1
         else:
+            c.setFill(color_rgb(255, 127, 0))
             xUns*= -1
             
         
