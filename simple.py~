@@ -1,0 +1,13 @@
+from graphics import *
+
+def main():
+    win = GraphWin("My Circle", 1200, 800)
+    c = Circle(Point(200,200), 100)
+    
+    c.move(500, 250)
+    c.draw(win)
+    
+    win.getMouse() # pause for click in window
+    win.close()
+
+main()
